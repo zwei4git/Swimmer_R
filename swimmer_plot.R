@@ -6,10 +6,9 @@
 #crstart: the date (#days from trt start) CR started
 #pfs: Progression-Free survival
 #hist: Histology in characters
-#ncyc: number of cycles subject stayed on treatment
 
 df%>%
-  select('Subject','trtdur','prstart','crstart','pfsstat','pfs','hist','ncyc')%>%
+  select('Subject','trtdur','prstart','crstart','pfsstat','pfs','hist')%>%
   mutate(trtdur=trtdur/30.4375,
          prstart=prstart/30.4375,
          crstart=crstart/30.4375,
